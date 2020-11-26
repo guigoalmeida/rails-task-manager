@@ -1,0 +1,10 @@
+<h1>My Tasks</h1>
+<p>Registered at the list object <%= @tasks%></p>
+
+<%= link_to "Create new task", new_path %>
+
+<% @tasks.each do |task|  %>
+<ul>
+<li>Task <%= task.id%> - <%= link_to task.title, task_path(task)%></li>
+</ul>
+<% end %>
